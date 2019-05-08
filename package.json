@@ -1,7 +1,7 @@
 {
   "name": "discord-region-role-bot",
   "version": "1.0.0",
-  "description": "Create Discord bots using a simple template.",
+  "description": "A Discord bot that allows users to self-assign regional roles using flag emojis.",
   "keywords": [
     "discord",
     "bot",
