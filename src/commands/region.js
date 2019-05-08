@@ -4,6 +4,7 @@ const getMemberRegionRoles = require('../util/getMemberRegionRoles');
 const getRegionRole = require('../util/getRegionRole');
 const hasRegionRole = require('../util/hasRegionRole');
 const listRegionRoles = require('../util/listRegionRoles');
+const removeDuplicates = require('../util/removeDuplicates');
 
 module.exports = {
   name: 'region',
@@ -14,7 +15,9 @@ module.exports = {
   deleteCommand: false,
   run: async (message, args) => {
     const [regionRolesToRemove, regionRolesToAdd] = [[], []];
-    const countries = args.map(getCountry).filter(Boolean);
+    const countries = removeDuplicates(args)
+      .map(getCountry)
+      .filter(Boolean);
     for (const country of countries) {
       const regionRole = await getRegionRole(message.guild, country);
       const hasRole = hasRegionRole(message.member, regionRole);
@@ -24,8 +27,8 @@ module.exports = {
     const messages = [];
 
     if (regionRolesToRemove.length) {
-      messages.push(`Removed ${listRegionRoles(regionRolesToRemove)}.`);
       await message.member.roles.remove(regionRolesToRemove);
+      messages.push(`Removed ${listRegionRoles(regionRolesToRemove)}.`);
     }
 
     if (regionRolesToAdd.length) {
@@ -34,8 +37,8 @@ module.exports = {
 
       const willAdd = regionRolesToAdd.slice(0, willAddCount);
       if (willAdd.length) {
-        messages.push(`Added ${listRegionRoles(willAdd)}.`);
         await message.member.roles.add(willAdd);
+        messages.push(`Added ${listRegionRoles(willAdd)}.`);
       }
 
       const willNotAdd = regionRolesToAdd.slice(willAddCount);
@@ -48,6 +51,8 @@ module.exports = {
       }
     }
 
-    if (messages.length) message.channel.send(messages.join('\n'));
+    if (messages.length) {
+      message.channel.send(messages.join('\n'));
+    }
   }
 };
