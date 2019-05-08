@@ -13,8 +13,6 @@ module.exports = {
   requireArgs: true,
   deleteCommand: false,
   run: async (message, args) => {
-    if (message.author.id !== '206161807491072000') return;
-
     const [regionRolesToRemove, regionRolesToAdd] = [[], []];
     const countries = args.map(getCountry).filter(Boolean);
     for (const country of countries) {
