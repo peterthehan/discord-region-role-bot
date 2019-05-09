@@ -5,8 +5,8 @@ const { token } = require('./config');
 const requireUncached = require('./util/requireUncached');
 
 const client = new Client();
-console.log(process.cwd(), __dirname);
-requireUncached('./loadCommands')(client, __dirname);
+
+requireUncached('./loadCommands')(client);
 require('./util/loadListeners')(client);
 
 client.login(token).catch(error => {
