@@ -6,7 +6,7 @@ const requireUncached = require('./util/requireUncached');
 
 const client = new Client();
 
-requireUncached('./loadCommands')(client);
+requireUncached('./loadCommands')(client, __dirname);
 require('./util/loadListeners')(client);
 
 client.login(token).catch(error => {
