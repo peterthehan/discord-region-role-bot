@@ -19,3 +19,7 @@ regionRoleLimit: 1
 ```
 
 > `regionRoleLimit` is the maximum number of regional country roles a user is able to have.
+
+## More Info
+
+List of flag emojis can be found at https://emojipedia.org/flags/.
