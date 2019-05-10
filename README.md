@@ -18,4 +18,4 @@ A Discord bot that allows users to self-assign regional country roles using flag
 regionRoleLimit: 1
 ```
 
-> `regionRoleLimit` is the number of regional country roles a user is able to have.
+> `regionRoleLimit` is the maximum number of regional country roles a user is able to have.
