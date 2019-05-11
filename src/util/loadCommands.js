@@ -5,11 +5,6 @@ const { Collection } = require('discord.js');
 module.exports = client => {
   const commands = new Collection();
 
-  console.log('dirname', __dirname);
-  console.log('filename', __filename);
-  console.log('process', process.cwd());
-  console.log('resolve', path.resolve(__dirname, '../commands'));
-  console.log('test');
   fs.readdirSync(path.resolve(__dirname, '../commands'))
     .filter(file => file.endsWith('.js'))
     .forEach(file => {
