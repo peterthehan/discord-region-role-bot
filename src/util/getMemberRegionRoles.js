@@ -1,5 +1,6 @@
-const wc = require('world-countries');
-const wcMap = new Set(wc.map(c => `${c.name.common} ${c.flag}`));
+const getRegionRoles = require('./getRegionRoles');
 
-module.exports = member =>
-  member.roles.filter(({ name }) => wcMap.has(name)).array();
+module.exports = member => {
+  const regionRoles = getRegionRoles();
+  return member.roles.filter(({ name }) => regionRoles.has(name)).array();
+};

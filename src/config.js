@@ -3,5 +3,6 @@ module.exports = {
   prefix: '.',
   commandDelimiter: '\n',
   commandLimit: '1',
-  regionRoleLimit: 1
+  regionRoleLimit: 1,
+  guilds: ['258167954913361930']
 };
