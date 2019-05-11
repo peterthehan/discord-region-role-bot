@@ -7,6 +7,7 @@ module.exports = client => {
   for (const guildId of guilds) {
     const guild = client.guilds.resolve(guildId);
     if (!guild) {
+      console.log(`${guildId} is not a valid guild id.`);
       continue;
     }
 
