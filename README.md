@@ -2,11 +2,11 @@
 
 A Discord bot that allows users to self-assign regional country roles using flag emojis.
 
+On load, the bot will prune regional country roles that have no member associated to them.
+
 <div align="center">
   <img src="https://raw.githubusercontent.com/peterthehan/discord-region-role-bot/master/assets/regionRole.gif" />
 </div>
-
-On load, the bot will prune regional country roles that have no member associated to them.
 
 ## Setup
 
