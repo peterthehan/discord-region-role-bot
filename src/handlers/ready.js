@@ -4,6 +4,7 @@ const getEmptyRegionRoles = require('../util/getEmptyRegionRoles');
 module.exports = client => {
   console.log(`${client.user.tag}: Ready`);
 
+  console.log(guilds);
   for (const guildId of guilds) {
     const guild = client.guilds.resolve(guildId);
     if (!guild) {
