@@ -6,6 +6,8 @@ A Discord bot that allows users to self-assign regional country roles using flag
   <img src="https://raw.githubusercontent.com/peterthehan/discord-region-role-bot/master/assets/regionRole.gif" />
 </div>
 
+On load, the bot will prune regional country roles that have no member associated to them.
+
 ## Setup
 
 1. Adapt and follow the steps found in [create-discord-bot](https://github.com/peterthehan/create-discord-bot).
@@ -27,4 +29,4 @@ guilds: [
 
 > List of flag emojis can be found at https://emojipedia.org/flags/.
 
-> The maximum number of roles in a server is set to [250](https://twitter.com/discordapp/status/954189000285270016).
+> The maximum number of roles in a server is [250](https://twitter.com/discordapp/status/954189000285270016).
