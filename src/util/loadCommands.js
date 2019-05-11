@@ -9,6 +9,7 @@ module.exports = client => {
   console.log('filename', __filename);
   console.log('process', process.cwd());
   console.log('resolve', path.resolve(__dirname, '../commands'));
+  console.log('test');
   fs.readdirSync(path.resolve(__dirname, '../commands'))
     .filter(file => file.endsWith('.js'))
     .forEach(file => {
