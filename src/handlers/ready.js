@@ -5,7 +5,7 @@ module.exports = client => {
   console.log(`${client.user.tag}: Ready`);
 
   for (const guildId of guilds) {
-    const guild = client.guilds.get(guildId);
+    const guild = client.guilds.resolve(guildId);
     if (!guild) {
       continue;
     }
