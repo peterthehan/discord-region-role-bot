@@ -15,9 +15,16 @@ A Discord bot that allows users to self-assign regional country roles using flag
 2. Open [src/config.js](https://github.com/peterthehan/discord-region-role-bot/blob/master/src/config.js) to configure your own settings:
 
 ```js
-regionRoleLimit: 1
+regionRoleLimit: 1,
+guilds: [
+  'GUILD_1_ID',
+  'GUILD_2_ID',
+  // ...Add as many guilds as you want.
+]
 ```
 
 > `regionRoleLimit` is the maximum number of regional country roles a user is able to have.
 
 > List of flag emojis can be found at https://emojipedia.org/flags/.
+
+> The maximum number of roles in a server is set to [250](https://twitter.com/discordapp/status/954189000285270016).
