@@ -30,3 +30,9 @@ guilds: [
 > List of flag emojis can be found at https://emojipedia.org/flags/.
 
 > The maximum number of roles in a server is [250](https://twitter.com/discordapp/status/954189000285270016).
+
+Visit for more help or information!
+
+<a href="https://discord.gg/WjEFnzC">
+  <img src="https://discordapp.com/api/guilds/258167954913361930/embed.png?style=banner2" title="Discord Server"/>
+</a>
